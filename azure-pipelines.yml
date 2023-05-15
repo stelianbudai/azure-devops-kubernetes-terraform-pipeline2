@@ -6,15 +6,8 @@
 trigger:
 - master
 
-strategy:
-  matrix:
-    linux:
-      operatingSystem: 'ubuntu-latest'
-    mac:
-      operatingSystem: 'macos-ltest'
-
 pool:
-  vmImage: ${operatingSystem}
+  vmImage: ubuntu-latest
 
 steps:
 - script: echo Hello, world! ${operatingSystem}
